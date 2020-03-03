@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="innerInstrument"
+            type="com.example.instrumentapplication.model.InnerInstruments" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/li_popup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+<TextView
+    android:id="@+id/pop_label"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Instrument Details"
+    android:textSize="24dp"
+    android:textColor="@color/colorWhite"
+    android:textStyle="bold"
+    android:layout_marginTop="15dp"
+    android:layout_marginLeft="10dp"
+    />
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_store_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            card_view:cardBackgroundColor="#ffffff"
+            card_view:cardCornerRadius="10dp"
+            card_view:cardElevation="5dp"
+            card_view:cardUseCompatPadding="true">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="350dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/id_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ID: "
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/instrument_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/id_label"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/name_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/instrument_id"
+                        android:text="Instrument Name: "
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/instrument_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/instrument_id"
+                        android:layout_toRightOf="@+id/name_label"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/source_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/name_label"
+                        android:text="Instrument Symbol: "
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/instrument_symbol"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/name_label"
+                        android:layout_toRightOf="@+id/source_label"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/asset_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/source_label"
+                        android:text="AssetClass: "
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:id="@+id/instrument_assetclass"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/source_label"
+                        android:layout_toRightOf="@+id/asset_label"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/quantityincrement_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/asset_label"
+                        android:text="QuantityIncrement: "
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:id="@+id/instrument_quantityincrement"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/asset_label"
+                        android:layout_toRightOf="@+id/quantityincrement_label"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/priceIncrement_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/quantityincrement_label"
+                        android:text="PriceIncrement: "
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/instrument_priceIncrement"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/quantityincrement_label"
+                        android:layout_toRightOf="@+id/priceIncrement_label"
+                        android:textColor="#000000" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_ok"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="20dp"
+                    android:background="@color/colorPrimary"
+                    android:text="OK"
+                    android:textColor="@color/colorWhite" />
+
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+</layout>
